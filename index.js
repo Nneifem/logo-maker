@@ -12,7 +12,7 @@ const questions = [
     {
         type: 'input',
         message: 'Enter a color or hexadecimal for the text',
-        name: 'color'
+        name: 'textColor'
     },
     {
         type: 'list',
@@ -36,6 +36,6 @@ const questions = [
     {
         type: 'input',
         message: 'Enter a color or hexadecimal for the shape',
-        name: 'shapeColor'
+        name: 'backgroundColor'
     }
-]
+];
