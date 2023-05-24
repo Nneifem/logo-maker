@@ -1,14 +1,22 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shapes = require('./lib/shapes');
 
+/* will format how the the shape and color will look */
+const generateLogo = (text, textColor, shape, backgroundColor) =>
+`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+
+<${shape} cx="150" cy="100" r="80" fill="${backgroundColor}" />
+
+<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+
+</svg>`
 
 /* questions for the user to answer to design their logo */
 const questions = [
     {
         type: 'input',
         message: 'Enter a three character text',
-        name: 'textColor'
+        name: 'text'
 
     },
     {
@@ -37,24 +45,8 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter a color or hexadecimal for the shape',
+        message: 'Enter a color or hexadecimal for the background of the shape',
         name: 'backgroundColor'
     }
 ];
 
-function writeToFile(fileName, data){
-    fs.writeFile(fileName, data, (err) => 
-        err ? console.log(err) : console.log('File has been successfully saved')
-    );
-}
-
-function init(){
-    inquirer
-    .prompt(questions)
-    .then((answers) => {
-        const createLogo = shapes(answers)
-        writeToFile('logo.svg', createLogo)
-    });
-}
-
-init();
