@@ -32,7 +32,7 @@ const generateLogo = ({text, textColor, shape, backgroundColor}) =>
 
 ${renderShape(shape, backgroundColor)}
 
-<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
+<text x="150" y="120" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
 
 </svg>`
 
