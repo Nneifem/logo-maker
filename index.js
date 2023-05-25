@@ -17,12 +17,12 @@ function renderShape(threeShapes, backgroundColor){
     else if(threeShapes === 'circle'){
         shape = new Circle();
         shape.setColor(backgroundColor);
-        shape.render();
+        return shape.render();
     }
     else if(threeShapes === 'square'){
         shape = new Square();
         shape.setColor(backgroundColor);
-        shape.render();
+        return shape.render();
     }
 }
 
