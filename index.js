@@ -1,26 +1,36 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Circle = require('./lib/circle');
+const Triangle = require('./lib/triangle');
+const Square = require('./lib/square');
+
 
 /* will format how the the shape and color will look */
-function renderShape(shape){
-    if(shape === 'triangle'){
-        triangle = 'polygon points="150, 18 244, 182 56, 182"';
-        return shape;
+let shape;
+function renderShape(threeShapes, backgroundColor){
+    console.log(threeShapes)
+    if(threeShapes === 'triangle'){
+        shape = new Triangle();
+        shape.setColor(backgroundColor);
+        return shape.render();
     }
-    else if(shape === 'circle'){
-        circle = 'circle cx="25" cy="75" r="20" height="30"';
-        return shape;
+    else if(threeShapes === 'circle'){
+        shape = new Circle();
+        shape.setColor(backgroundColor);
+        shape.render();
     }
-    else if(shape === 'square'){
-        square = 'squ x="10" y="10" width="30" height="30"';
-        return shape;
+    else if(threeShapes === 'square'){
+        shape = new Square();
+        shape.setColor(backgroundColor);
+        shape.render();
     }
 }
 
-const generateLogo = (text, textColor, shape, backgroundColor) =>
+/* the format to create the logo with user input*/
+const generateLogo = ({text, textColor, shape, backgroundColor}) =>
 `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-<${shape} ${renderShape(shape)} fill="${backgroundColor}" />
+${renderShape(shape, backgroundColor)}
 
 <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>
 
