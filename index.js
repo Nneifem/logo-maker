@@ -8,7 +8,6 @@ const Square = require('./lib/square');
 /* will format how the the shape and color will look */
 let shape;
 function renderShape(threeShapes, backgroundColor){
-    console.log(threeShapes)
     if(threeShapes === 'triangle'){
         shape = new Triangle();
         shape.setColor(backgroundColor);

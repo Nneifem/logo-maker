@@ -2,13 +2,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
 This project was build for anyone who wanted to have a simple, three word logo without having to create one themselves using photoshop or any other editing software and have it within seconds after inputting the information needed. Creating this solves the issues of anyone who is looking for a fast way to make a logo for a project, profile picture, or etc. This helped me learn how to use and get a better understanding on how constructors, classes, and test.js. Another thing it taught me is that there is many ways to aproach this project with getting the same results.
 
 ## Installation
@@ -17,7 +10,7 @@ In order to get the project to work, you will need to install Node js. v16, inqu
 
 ## Usage
 
-Link to the demo of the logo maker:
+Link to the demo of the logo maker: https://drive.google.com/file/d/15GtT3VrTShPbvWNn2TvvziaMLWSpNZNb/view?usp=share_link
 
 When everything has been installed, open the integrated terminal, type in node index to then answer the following questions prompted to you and once complete, your logo will be created. To test out each of the test, open the integrated terminal through the one of the test files, type in npm run test and there will be an indication if the test have passed or not.
 
